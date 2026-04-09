@@ -37,6 +37,7 @@ bad_day_words = [
 ]
 
 good_day_words = [
+    "good",
     "great",
     "awesome",
     "fantastic",
@@ -77,18 +78,21 @@ print(f"Hello {name}, how are you feeling today?")
 userInput = input().lower()
 day = ""
 
-# Check bad words
+# Check for bad words
 for word in bad_day_words:
     if findWord(userInput, word):
         print("Sorry, that's not a good day.")
         day = "bad"
         break
 
+# check for good words
 if day != "bad":
     for word in good_day_words:
         if findWord(userInput, word):
             print("Great, that's a good day.")
             day = "good"
             break
+
+# if I could not find any specific words
 if day != "good" and day != "bad":
-    print("I could not determine how your day is")
+    print("I could not determine how you are feeling.")
