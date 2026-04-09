@@ -81,7 +81,7 @@ day = ""
 # Check for bad words
 for word in bad_day_words:
     if findWord(userInput, word):
-        print("Sorry, that's not a good day.")
+        print("Sorry, that sounds like a bad day.")
         day = "bad"
         break
 
@@ -89,7 +89,7 @@ for word in bad_day_words:
 if day != "bad":
     for word in good_day_words:
         if findWord(userInput, word):
-            print("Great, that's a good day.")
+            print("Great, that sounds like a good day.")
             day = "good"
             break
 
