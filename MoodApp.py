@@ -96,3 +96,7 @@ if day != "bad":
 # if I could not find any specific words
 if day != "good" and day != "bad":
     print("I could not determine how you are feeling.")
+
+import pygame
+
+running = True
